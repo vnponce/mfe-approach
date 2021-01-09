@@ -64,7 +64,7 @@ export default function Landing() {
           <span>HERO</span>
         </div>
         <Link to="/pricing">
-          <button>Go to Pricing!</button>
+          <button>Go to Pricing</button>
         </Link>
         <div className="content">
           {cards.map((card, index) => (
