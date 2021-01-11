@@ -3,6 +3,8 @@ const ModuleFederationPlugin = require('webpack/lib/container/ModuleFederationPl
 const packageJson = require('../package.json');
 const commonConfig = require('./webpack.common');
 
+const domain = process.env.PRODUCTION_DOMAIN;
+
 const prodConfig = {
   mode: 'production',
   output: {
@@ -15,6 +17,9 @@ const prodConfig = {
       filename: 'remoteEntry.js',
       exposes: {
         './MarketingApp': './src/bootstrap',
+      },
+      remotes: {
+        ui: `ui@${domain}/ui/latest/remoteEntry.js`,
       },
       shared: packageJson.dependencies,
     }),

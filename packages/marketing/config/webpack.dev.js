@@ -23,6 +23,9 @@ const devConfig = {
       exposes: {
         './MarketingApp': './src/bootstrap',
       },
+      remotes: {
+        ui: 'ui@http://localhost:8083/remoteEntry.js',
+      },
       shared: packageJson.dependencies,
     }),
     new HtmlWebpackPlugin({

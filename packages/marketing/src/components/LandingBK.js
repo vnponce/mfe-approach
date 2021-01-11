@@ -1,8 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import Hero from "ui/Hero";
-import Product from "ui/Product";
 
 const LandingWrapper = styled.div`
   .hero {
@@ -58,17 +56,41 @@ function Copyright() {
 
 const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
-export default function LandingWithRemotes() {
+export default function LandingBK() {
   return (
     <LandingWrapper>
       <main>
-        <Hero />
+        <div className="hero">
+          <span>HERO</span>
+        </div>
         <Link to="/pricing">
           <button>Go to Pricing</button>
         </Link>
         <div className="content">
           {cards.map((card, index) => (
-              <Product index={index} />
+              <div key={index} className="card">
+                <img
+                  src="https://source.unsplash.com/random"
+                  title="Image title"
+                />
+                <div>
+                  <h2>
+                    Heading
+                  </h2>
+                  <p>
+                    This is a media card. You can use this section to describe
+                    the content.
+                  </p>
+                </div>
+                <div>
+                  <button>
+                    View
+                  </button>
+                  <button>
+                    Edit
+                  </button>
+                </div>
+              </div>
           ))}
         </div>
       </main>
