@@ -1,12 +1,17 @@
 import React from 'react';
+import styled from "styled-components";
+
+const ButtonWrapper = styled.div`
+  
+`;
 
 const Button = ({ children }) => {
   return (
-    <div>
+    <ButtonWrapper>
       <button>
         {children}
       </button>
-    </div>
+    </ButtonWrapper>
   );
 };
 
