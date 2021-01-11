@@ -8,14 +8,12 @@ import Signup from "./components/Signup";
 export default ({ history }) => {
   return (
     <div>
-      <StylesProvider>
-        <Router history={history}>
-          <Switch>
-            <Route path="/auth/signin" component={SignIn} />
-            <Route path="/auth/signup" component={Signup} />
-          </Switch>
-        </Router>
-      </StylesProvider>
+      <Router history={history}>
+        <Switch>
+          <Route path="/auth/signin" component={SignIn} />
+          <Route path="/auth/signup" component={Signup} />
+        </Switch>
+      </Router>
     </div>
   );
 };
