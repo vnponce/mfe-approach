@@ -11,7 +11,6 @@ const AuthLazy = lazy(() => import('./components/AuthApp'));
 export default () => {
   return (
     <BrowserRouter>
-        {/*<h1>Hi there!</h1>*/}
         <Nav />
         <hr/>
         <Suspense fallback={<div>Loading [Imagine this is a loading bar]...</div>}>
