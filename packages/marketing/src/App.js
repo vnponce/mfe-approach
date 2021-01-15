@@ -7,7 +7,7 @@ import Pricing from './components/Pricing';
 
 export default ({ history }) => {
   return (
-    <div>
+    <div style={{ border: '0px solid red' }}>
       <StylesProvider>
         <Router history={history}>
           <Switch>

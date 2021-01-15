@@ -23,7 +23,7 @@ export default function Product({ index }) {
         />
         <div>
           <h2>
-            Heading
+            Testing!
           </h2>
           <p>
             This is a media card. You can use this section to describe
